@@ -39,11 +39,6 @@ def wins_numerically(match_results): #converts list with history of win loss int
 
 results = wins_numerically(wins)
 
-def get_date(data):
-    match_dates = []
-    for matches in data:
-        match_dates.append(matches[date])
-
 # v2.1 - Convert the match timestamp to a dd-mm-yy format
 def convert_date(data): #v2.1
     match_dates = []
