@@ -52,8 +52,11 @@ def convert_date(data): #v2.1
 dates = convert_date(data) #v2.1
 
 def create_dictionary(dates, wins): #v2.1
+    dict = {}
     for win in wins:
-        dict = {'Result': win, 'Date': dates}
+        dict.update({win: dates})
+    print(dict)
+
 
 create_dictionary(dates, wins)
 
