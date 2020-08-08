@@ -47,10 +47,15 @@ def convert_date(data): #v2.1
         dtime = datetime.fromtimestamp(tstamp)
         date = dtime.strftime('%d-%m-%y')
         # print('Fecha del partido: ', date) #v2.1 (just for debug)
+        return date
 
-convert_date(data) #v2.1
+dates = convert_date(data) #v2.1
 
+def create_dictionary(dates, wins): #v2.1
+    for win in wins:
+        dict = {'Result': win, 'Date': dates}
 
+create_dictionary(dates, wins)
 
 plt.scatter(range(len(results)), results)
 plt.plot(range(len(results)), results)
