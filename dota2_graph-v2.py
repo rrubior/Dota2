@@ -14,6 +14,8 @@ res = requests.get(f'https://api.opendota.com/api/players/{account_id}/Matches',
 
 data = res.json()
 
+dictionary = {} #v2.1 - Creating dictionary to save pairs of date:result
+
 def check_wins(data):
     match_results = []
     for matches in data:
